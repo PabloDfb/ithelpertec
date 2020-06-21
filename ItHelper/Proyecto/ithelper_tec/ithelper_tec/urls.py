@@ -20,11 +20,12 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include(('aplicaciones.base.urls','base'))),
 ]
 
 if settings.DEBUG:
     urlpatterns += [
-        re_path(r'^media/(?P<path>.*)$', serve, {
+        re_path(r'^media/(?P<path>.*)$', serve ,{
             'document_root':settings.MEDIA_ROOT,
         })
     ]
