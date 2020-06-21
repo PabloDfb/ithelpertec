@@ -1,0 +1,51 @@
+* { margin: 0; padding: 0; }
+
+.wrapper{
+  margin: 5px auto;
+}
+
+header {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 10em;
+}
+
+
+section {
+  background: lightblue;
+  width: 100%;
+}
+
+footer {
+  background: lightgray;
+  height: 5em;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+  line-height: 4em;
+  font-weight: bold;
+
+}
+
+#navbar-menu{
+    float: right;
+    margin: 40px;
+}
+
+#navbar-menu li{
+  color: black;
+}
+
+#logo{
+  width: 80%;
+  height: 80%;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}

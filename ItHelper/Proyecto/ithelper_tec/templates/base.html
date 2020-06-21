@@ -1,12 +1,56 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base</title>
-    <link rel="stylesheet" href="">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title%} {% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="{% static  'css/base.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="center">
+        <nav class="navbar navbar">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <img id="logo" src="{% static 'media/logo.png'%}" alt="" />
+            </div>
+            <div id="navbar-menu">
+              <ul class="nav navbar-nav">
+                <li class="active">
+                  <a href="{% url 'base:index'%}">Inicio</a>
+                </li>
+                <li class="dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    
+                    href="{% url 'base:nosotros' %}"
+                  >
+                    Nosotros</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li><a href="{% url 'base:servicios' %}">Servicios</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    {% block content %}
+    {% endblock %}
+  
+
     
-</body>
+  </body>
 </html>
