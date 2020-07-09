@@ -2,14 +2,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{%block title%}Nosotros {%endblock%}</title>
-  </head>
+  <title>{%block title%}Nosotros {%endblock%}</title>
+  {% block style %}
+  <link href="{% static  'css/nosotros.css' %}" rel="stylesheet" />
+  {% endblock %}
   <body>
     {% block content %}
-    <h1>Nosotros</h1>
+    <div class="wrapper-general">
+      <div id="background-1" class="parallax">
+        <section class="parallax-inner">
+          <h1 class="title">Nosotros</h1>
+        </section>
+      </div>
+
+      <div class="container-p">
+        <p class="text-center">
+          Somos un empresa chilena que inicia sus operaciones en el año 2013 con
+          la finalidad de entregar un servicio TI de calidad a empresas medianas
+          y pequeñas del mercado público y privado.
+        </p>
+        <p class="text-center">
+          Somos consultores expertos en tecnología, contamos con un equipo de
+          gran capacidad técnica, ofreciendo un servicio de calidad y adaptación
+          para cada necesidad de nuestros clientes.
+        </p>
+      </div>
+    </div>
     {% endblock %}
   </body>
 </html>

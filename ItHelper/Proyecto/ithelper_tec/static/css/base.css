@@ -1,51 +1,319 @@
-* { margin: 0; padding: 0; }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
-.wrapper{
-  margin: 5px auto;
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.logo {
+  margin: 15px 0px 0px 20px;
 }
 
 header {
+  background: white;
+  height: 160px;
+}
+body {
+  background: rgb(243, 243, 243);
+}
+
+header .logo {
+  float: left;
+}
+
+header ul {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  position: relative;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  width: 150px;
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+
+header ul li ul li {
   width: 100%;
 }
 
-.container {
-  display: flex;
-  height: 10em;
+header ul li ul li a {
+  padding: 10px;
+  background: white;
+  color: #0d165c;
 }
 
-
-section {
-  background: lightblue;
-  width: 100%;
+header ul li ul li a:hover {
+  background: rgb(197, 197, 197);
 }
 
-footer {
-  background: lightgray;
-  height: 5em;
-  width: 100%;
+header ul li a {
+  display: block;
+  padding: 21px;
+  font-size: 1.1em;
+  text-decoration: none;
 }
 
-.center {
+header ul li a:hover {
+  background: rgb(197, 197, 197);
+  transition: 0.5s;
+}
+
+header .menu-toggle {
+  display: none;
+}
+
+header * {
+  color: #0d165c;
+}
+
+.nav {
+  margin: 60px 60px 0px 0px;
+}
+
+.content {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 4em;
+}
+
+.parallax-inner {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.title {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #2e8bfb;
+  text-align: center;
+  margin-top: 60px;
   font-weight: bold;
-
+  font-style: italic;
+  font-family: "Montserrat";
+  text-shadow: 2px 2px 2px #000000;
 }
 
-#navbar-menu{
-    float: right;
-    margin: 40px;
+.p-title {
+  margin-bottom: 10%;
+  font-size: 40px;
+  color: #0d165c;
+  text-align: center;
+  letter-spacing: 4px;
 }
 
-#navbar-menu li{
+.f-title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 2%;
+}
+
+.email {
+  font-size: 15px;
+  text-align: center;
+  font-weight: lighter;
   color: black;
 }
 
-#logo{
-  width: 80%;
-  height: 80%;
+.contacto {
+  background: url("https://www.qualityradio.com.ar/wp-content/uploads/2018/08/cafe.jpg")
+    repeat fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 10%;
+  width: 100%;
+  height: 500px;
 }
 
-.dropdown:hover>.dropdown-menu {
-  display: block;
+.c-title {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px #000000;
 }
+
+.rrss {
+  text-align: center;
+  margin: 10px;
+}
+.rrss a {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+footer {
+  background-color: white;
+  padding: 3%;
+}
+
+.subtitle-3 {
+  font-size: 18px;
+  color: #0d165c;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.subtitle-4{
+  color: #0d165c;
+  font-size: 30px;
+  text-align: center;
+}
+
+.p-title-2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: #2e8bfb;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 545px) {
+  header {
+    position: relative;
+  }
+  header * {
+    color: white;
+  }
+  .nav {
+    margin: 0px;
+  }
+  header ul {
+    width: 100%;
+    background: #1b3b6f;
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .showing {
+    max-height: 100em;
+  }
+
+  header ul li {
+    width: 100%;
+  }
+
+  header ul li ul {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+
+  header ul li ul li a {
+    background: inherit;
+    color: white;
+    padding-left: 50px;
+  }
+
+  header ul li a:hover {
+    background: #3463af;
+    transition: 0.5s;
+  }
+
+  header ul li ul li a:hover {
+    background: #3463af;
+  }
+
+  header .menu-toggle {
+    display: block;
+    color: black;
+    padding: 0px;
+    right: 30px;
+    top: 50px;
+    font-size: 2em;
+    position: absolute;
+  }
+
+  #logo {
+    width: 70%;
+    height: 70%;
+  }
+
+  header {
+    background: white;
+    height: 120px;
+  }
+}
+
+.readmore-1{
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  display:table;
+  margin: 0 auto;
+  font-weight: bolder;
+}
+
+.readmore-2{
+
+  text-decoration: none;
+  text-align: left;
+  display:table;
+  padding-top: 10px;
+  font-weight: bolder;
+}
+
+
+/* Partners */
+
+.carousel-container{
+  width: 100%;
+  margin: 50px auto;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.card-container{
+  width: 180px;
+  height: 130px;
+  flex-shrink: 0;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.track{
+  display: flex;
+}
+
+.card-container .card{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.subtitle-1 {
+  margin: 10px 150px 30px 0px;
+  font-size: 18px;
+  color: #0d165c;
+  letter-spacing: 2px;
+}
+
