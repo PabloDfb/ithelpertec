@@ -1,0 +1,19 @@
+#background-1 {
+    background: url("https://i.imgur.com/IUdhSmR.png") repeat fixed;
+    height: auto;
+    min-width: 100%;
+  }
+
+ .container-p{
+     padding: 7% 10% 7% 10%;
+ } 
+
+.container-p p{
+    padding-top: 1%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.wrapper-general{
+    width: 100%;
+}
