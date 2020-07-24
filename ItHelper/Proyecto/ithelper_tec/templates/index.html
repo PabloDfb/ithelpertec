@@ -50,7 +50,7 @@
       <img class="handsonkeys2" src="https://i.imgur.com/Hi8vzX2.png" alt="" />
     </div>
 
-    <div class="col-md-3 offset-md-1">
+    <div class="col-xl-6">
       <div class="products">
         <h1 class="titulo-servicios">
           NUESTROS <br />
@@ -59,11 +59,7 @@
         </h1>
 
         <p class="p-servicios1">
-          PÁRRAFO DE EJEMPLO: Este es el párrafo de introducción de tu sección
-          de Servicios. Escribe aquí un breve resumen para presentar los
-          servicios que ofreces, y recuerda resaltar sus beneficios y
-          características especiales. Invita a tus usuarios a explorar los
-          servicios específicos que mencionas a continuación.
+          En IT Helper contamos con una gran variedad de productos y servicios
         </p>
 
         <div class="offset-md-1">
@@ -79,10 +75,11 @@
             Amplia gama de equipos tecnológicos para particulares, empresas y
             pymes.
           </p>
-
-          <a class="readmore-2" href="{% url 'base:servicios' %}">
-            Leer más...
-          </a>
+          <div class="wrapper-readmore">
+            <a class="readmore-2" href="{% url 'base:servicios' %}">
+              Leer más...
+            </a>
+          </div>
 
           <h1 class="title-2">
             SERVICIOS
@@ -107,123 +104,70 @@
           <h1 class="subtitle-2">
             4.- Desarrollo de Aplicaciones Web
           </h1>
-
-          <a class="readmore-2" href="{% url 'base:servicios' %}">
-            Leer más...
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="row">
-    <div class="col-lg-6 align-items-center text-center">
-      <h1 class="p-title">SOBRE NOSOTROS</h1>
-      <p class="">
-        Desde nuestra fundación en el año 2013, It Helper ha tenido un solo
-        objetivo en mente: entregar un servicio ti de calidad a empresas
-        pequeñas y medianas del mercado público y privado.
-      </p>
-      <p class="">
-        Somos consultores expertos en tecnología, contamos con un equipo de gran
-        capacidad técnica, ofreciendo un servicio de calidad y adaptación para
-        cada necesidad y abordamos los proyectos con un enfoque distinto para
-        desarrollar estrategias únicas y personalizadas con el fin de entregar
-        la solución optima.
-      </p>
-
-      <a class="readmore-1" href="{% url 'base:nosotros' %}">
-        Leer más...
-      </a>
-    </div>
-    <div class="col-lg-6">
-      <video class="videoBG" autoplay muted loop>
-        <source src="https://i.imgur.com/8oJUMS6.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </div>
-
-  <div class="col-lg-6">
-    <img class="handsonkeys2" src="https://i.imgur.com/Hi8vzX2.png" alt="" />
-  </div>
-  <div class="col-lg-6">
-    <div class="texto-servicios">
-      <div class="wrapper-servicios">
-        <div class="div-servicios">
-          <div class="serv-top">
-            <h1 class="titulo-servicios">
-              NUESTROS <br />
-              PRODUCTOS Y <br />
-              SERVICIOS
-            </h1>
-
-            <p class="p-servicios1">
-              PÁRRAFO DE EJEMPLO: Este es el párrafo de introducción de tu
-              sección de Servicios. Escribe aquí un breve resumen para presentar
-              los servicios que ofreces, y recuerda resaltar sus beneficios y
-              características especiales. Invita a tus usuarios a explorar los
-              servicios específicos que mencionas a continuación.
-            </p>
-          </div>
-
-          <div class="serv-bot">
-            <h1 class="title-2">
-              PRODUCTOS
-            </h1>
-
-            <p class="subtitle-1">
-              Nuestros logros
-            </p>
-
-            <p class="p-servicios3">
-              Amplia gama de equipos tecnológicos para particulares, empresas y
-              pymes.
-            </p>
-
+          <div class="wrapper-readmore">
             <a class="readmore-2" href="{% url 'base:servicios' %}">
               Leer más...
             </a>
-
-            <h1 class="title-2">
-              SERVICIOS
-            </h1>
-
-            <p class="subtitle-1">
-              Satisfacción garantizada
-            </p>
-
-            <div>
-              <h1 class="subtitle-2">
-                1.- Consultoría
-              </h1>
-
-              <h1 class="subtitle-2">
-                2.- Ingreniería de Sistemas y Soporte TI
-              </h1>
-
-              <h1 class="subtitle-2">
-                3.- Implementación de Aplicaciones
-              </h1>
-
-              <h1 class="subtitle-2">
-                4.- Desarrollo de Aplicaciones Web
-              </h1>
-            </div>
           </div>
-          <a class="readmore-2" href="{% url 'base:servicios' %}">
-            Leer más...
-          </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-12">
-    <div class="contacto">
-      <h1 class="title">CONTACTO</h1>
-    </div>
-  </div>
 
-  <div class="container-servicios"></div> -->
+  <div id="background-2" class="parallax">
+    <section class="parallax-inner">
+      <div class="contact-form">
+        <div class="section-heading">
+          <h2 class="title">Contacto</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="contacto">
+          <form action="{% url 'base:contact_success' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <input
+                  type="text"
+                  name="message-name"
+                  class="form-control mb-30"
+                  placeholder="Nombre completo"
+                />
+              </div>
+              <div class="form-group col-lg-6">
+                <input
+                  type="email"
+                  name="message-email"
+                  class="form-control mb-30"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group col-lg-6">
+                <input
+                  type="tel"
+                  name="message-phone"
+                  class="form-control mb-30"
+                  placeholder="Teléfono"
+                />
+              </div>
+              <div class="form-group col-12">
+                <textarea
+                  name="message"
+                  class="form-control mb-30"
+                  placeholder="Escribe un mensaje..."
+                ></textarea>
+              </div>
+              <div class="form-group col-12">
+                <button type="submit" class="btn btn-primary">
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
 
   {% endblock %}
 </body>

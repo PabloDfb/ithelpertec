@@ -25,6 +25,14 @@ SECRET_KEY = '1=5u@&%9#0*kj=f-d&%gughror3j!u%z_$x&7w^j#l%%p#6n&s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'contactoithelper@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+
+
+
 ALLOWED_HOSTS = []
 
 

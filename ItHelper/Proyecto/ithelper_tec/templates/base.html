@@ -42,83 +42,108 @@
     {% block style %}{% endblock %}
   </head>
   <body>
-      <header>
-        <div class="row">
-          <div class="col-lg-12">
-            <i class="fa fa-bars menu-toggle"></i>
-            <div class="logo">
-              <img id="logo" src="{% static 'media/logo.png' %}" alt="" />
-            </div>
-            <ul class="nav">
-              <li><a href="{% url 'base:index'%}">Inicio</a></li>
-              <li>
-                <a href="{% url 'base:nosotros' %}">
-                  Nosotros
-                  <i class="fa fa-chevron-down" style="font-size: 0.8em;"></i>
-                </a>
-
-                <ul class="dropdownnosotros">
-                  <li><a href="{% url 'base:servicios' %}">Servicios</a></li>
-                  <li><a href="{% url 'base:certif' %}">Certificaciones</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="https://www.ithelper.cl" target="_blank"
-                  ><i
-                    class="fa fa-shopping-cart"
-                    aria-hidden="true"
-                    style="font-size: 2em;"
-                  ></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+    <header>
+      <div class="menu-navbar">
+        <i class="fa fa-bars menu-toggle"></i>
+        <div class="logo">
+          <a href="{% url 'base:index'%}"
+            ><img class="logo" src="{% static 'media/logo.png' %}" alt=""
+          /></a>
         </div>
-      </header>
+        <ul class="nav">
+          <li><a href="{% url 'base:index'%}">Inicio</a></li>
+          <li>
+            <a href="{% url 'base:nosotros' %}">
+              Nosotros
+              <i class="fa fa-chevron-down" style="font-size: 0.8em;"></i>
+            </a>
 
-      {% block content %} {% endblock %}
-  
+            <ul class="dropdownnosotros">
+              <li><a href="{% url 'base:servicios' %}">Servicios</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="{% url 'base:store' %}" target="_blank"
+              ><i
+                class="fa fa-shopping-cart"
+                aria-hidden="true"
+                style="font-size: 2em;"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {% block content %} {% endblock %}
 
     <footer class="center">
       <h1 class="f-title">Patrocinadores</h1>
+      <div class="row partners">
+        <div class="col-lg-6 subpartners1">
+          <div class="row justify-content-end">
+            <div class="col align-self-center">
+              <img
+                class="aruba"
+                src="{% static 'media/partner/aruba.png'%}"
+                alt="First slide"
+              />
+            </div>
 
-      <div class="carousel-container">
-        <div class="track">
-          <div class="card-container">
-            <div class="card"></div>
+            <div class="col align-self-center">
+              <img
+                class="meraki"
+                src="{% static 'media/partner/cisco meraki.png'%}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col align-self-center">
+              <img
+                class="fortinet"
+                src="{% static 'media/partner/fortinet.png'%}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col align-self-center">
+              <img
+                class="hp w-10"
+                src="{% static 'media/partner/hp.png'%}"
+                alt="First slide"
+              />
+            </div>
           </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
-          </div>
-          <div class="card-container">
-            <div class="card"></div>
+        </div>
+        <div class="col-lg-6 subpartners2 d-flex align-items-center">
+          <div class="row">
+            <div class="col">
+              <img
+                class=""
+                src="{% static 'media/partner/lenovo.png'%}"
+                alt="First slide"
+              />
+            </div>
+
+            <div class="col">
+              <img
+                class="mcaffee"
+                src="{% static 'media/partner/mcaffee.png'%}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="microsoft365"
+                src="{% static 'media/partner/microsoft 365.png'%}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="sophos"
+                src="{% static 'media/partner/Sophos.png'%}"
+                alt="First slide"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -129,24 +154,29 @@
         <p class="email">+56229060002</p>
         <div class="rrss">
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/ithelper_tecnologia-108192747636179"
             target="_blank"
             class="fa fa-facebook"
           ></a>
           <a
-            href="https://twitter.com/"
+            href="https://twitter.com/IThelper_tecno"
             target="_blank"
             class="fa fa-twitter"
           ></a>
           <a
-            href="https://cl.linkedin.com/"
+            href="https://www.instagram.com/ithelper_tecnologia/"
             target="_blank"
-            class="fa fa-linkedin"
+            class="fa fa-instagram"
+          ></a>
+
+          <a
+            href="https://bit.ly/whatsappIT_HELPER"
+            target="_blank"
+            class="fa fa-whatsapp"
           ></a>
         </div>
       </div>
     </footer>
-
 
     <script src="{% static 'js/base.js' %}"></script>
   </body>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link href="{% static  'css/contact_success.css' %}" rel="stylesheet" />
+{% endblock %}
+<body>
+  {% block content %}
+
+  <div class="success">
+    <h1 class="title">FORMULARIO ENVIADO</h1>
+
+    <p>¡Gracias por contactarnos, {{ message_name }}!.</p>
+    <p>Te responderemos a la brevedad.</p>
+    <a href="{% url 'base:index'%}"> Volver </a>
+  </div>
+
+  {% endblock %}
+</body>
